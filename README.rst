@@ -70,15 +70,27 @@ Symbolic differentiation is powered in OpenTURNS by a `modified version
 
 Examples (v / `ibrahim_hanif`)
 ================
-Folder: `openturns\python\doc\examples\` contains many examples of use of OpenTURNS.
+
+Folder: `openturns/python/doc/examples/` contains many examples of use of OpenTURNS.
+
 Reliability analysis: code @ `.\reliability\reliability_analysis\` & docs @ https://openturns.github.io/openturns/latest/auto_reliability/reliability_analysis/index.html
+
 1. Simulate an event: `plot_event_manipulation.py`
+
 MCS:
+
 2. Estimate a probability with Monte Carlo: `plot_estimate_probability_monte_carlo.py`
+
 IS:
+
 3. Use the Importance Sampling algorithm: `plot_estimate_probability_importance_sampling.py`
+
 FORM:
+
 4. Use the FORM - SORM algorithms: `plot_estimate_probability_form.py`
+
 5. Use the FORM algorithm in case of several design points: `plot_multi_form.py`
+
 6. An illustrated example of a FORM probability estimate: `plot_form_explained.py`
+
 7. Using the FORM - SORM algorithms on a nonlinear function: `plot_estimate_probability_form_oscillator.py`
