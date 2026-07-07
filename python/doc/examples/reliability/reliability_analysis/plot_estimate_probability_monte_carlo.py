@@ -30,16 +30,16 @@ model = sm.model
 # We create the event whose probability we want to estimate.
 
 # %%
-vect = ot.RandomVector(distribution)
-G = ot.CompositeRandomVector(model, vect)
-event = ot.ThresholdEvent(G, ot.Less(), 0.0)
+vect = ot.RandomVector(distribution) #(v) X = [X1, X2]
+G = ot.CompositeRandomVector(model, vect) #(v) Y = G(X) = g(X1, X2)
+event = ot.ThresholdEvent(G, ot.Less(), 0.0) #(v) E = {Y < 0} = {G(X) < 0}
 
 # %%
 # Create a Monte Carlo algorithm.
 
 # %%
 experiment = ot.MonteCarloExperiment()
-algo = ot.ProbabilitySimulationAlgorithm(event, experiment)
+algo = ot.ProbabilitySimulationAlgorithm(event, experiment) #(v) Pf = P(E) = P(G(X) < 0)
 algo.setMaximumCoefficientOfVariation(0.05)
 algo.setMaximumOuterSampling(int(1e5))
 algo.setKeepSample(True)
@@ -56,3 +56,5 @@ print("Pf=", probability)
 # %%
 # Print the size of used sample and compare it with the budget size (1e5)
 print(f"Sample used to get the probability = {len(algo.getOutputSample())}")
+
+# %%

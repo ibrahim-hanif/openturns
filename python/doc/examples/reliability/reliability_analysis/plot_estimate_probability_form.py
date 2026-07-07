@@ -192,3 +192,5 @@ result = algo.getResult()
 
 # %%
 otv.View.ShowAll()
+
+# %%

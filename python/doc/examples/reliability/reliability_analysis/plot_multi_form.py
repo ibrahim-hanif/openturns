@@ -34,7 +34,7 @@ view = otv.View(graphPDF, contour_kw={"norm": "log"})
 # scalar output `Y = f(X)`.
 f = ot.SymbolicFunction(["x0", "x1"], ["5.0-x1-0.5*(x0-0.1)^2"])
 graphModel = f.draw([-8.0, -8.0], [8.0, 8.0])
-graphModel.setXTitle(r"$x_1$")
+graphModel.setYTitle(r"$x_1$")
 graphModel.setXTitle(r"$x_2$")
 graphModel.setTitle(r"Isolines of the model : $Y = f(X)$")
 view = otv.View(graphModel)
@@ -140,3 +140,5 @@ print("    wrt design point 2 : ", pf2)
 # %%
 # Display the figures
 otv.View.ShowAll()
+
+# %%
